@@ -4,5 +4,7 @@ public class ArraySequence implements IntegerSequence{
   private int []data;
 
   /*Construct the sequence by copying values from the other array into the data array*/
-  public ArraySequence(int [] other){  }
+  public ArraySequence(int [] other){
+    
+  }
 }
