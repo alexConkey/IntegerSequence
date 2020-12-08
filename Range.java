@@ -13,12 +13,18 @@ public class Range implements IntegerSequence{
     return end + 1 - start;
   }
   public boolean hasNext(){
-
+    return (current < ending);
   }
 
   //@throws NoSuchElementException
   public int next(){
-
+    int tempCurrent = current;
+    if (hasNext()){
+      current++;
+    }else{
+      throw new NoSuchElementException("Sequence has no more elements");
+    }
+    return tempCurrent;
   }
 
 }
