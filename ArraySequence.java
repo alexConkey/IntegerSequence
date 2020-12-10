@@ -18,9 +18,21 @@ public class ArraySequence implements IntegerSequence{
     currentIndex = 0;
   }
   public void reset(){
-    current = data[0];
+    currentIndex = data[0];
   }
   public int length(){
     return data.length();
+  }
+  public boolean hasNext(){
+    return (currentIndex != data.length()-1);
+  }
+  public int next(){
+    int tempCurrent = currentIndex;
+    if (hasNext()){
+      currentIndex++;
+    }else{
+      throw new NoSuchElementException("Sequence has no more elements");
+    }
+    return data[tempCurrent];
   }
 }
