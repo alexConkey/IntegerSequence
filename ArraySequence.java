@@ -21,10 +21,10 @@ public class ArraySequence implements IntegerSequence{
     currentIndex = data[0];
   }
   public int length(){
-    return data.length();
+    return data.length;
   }
   public boolean hasNext(){
-    return (currentIndex != data.length()-1);
+    return (currentIndex != data.length-1);
   }
   public int next(){
     int tempCurrent = currentIndex;
